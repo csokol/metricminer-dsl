@@ -11,7 +11,7 @@ class Loader
 
     load "config/initialize.rb"
 
-    DataMapper.setup(:default, 'mysql://root:@localhost/MetricMiner')
+    DataMapper.setup(:default, 'mysql://root:@localhost/metricminerdsl')
     DataMapper.repository(:default).adapter.resource_naming_convention = ResourceNamingConvention
     DataMapper.repository(:default).adapter.field_naming_convention = FieldNamingConvention
 
