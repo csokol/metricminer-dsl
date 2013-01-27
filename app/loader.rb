@@ -9,7 +9,7 @@ class Loader
     scripts = Dir.entries(MODELS_DIR).select {|f| f.end_with? ".rb"} 
     scripts = scripts.map {|s| MODELS_DIR + s}
 
-    load "config/initialize.rb"
+    load "config/naming_conventions.rb"
 
     DataMapper.setup(:default, 'mysql://root:@localhost/metricminerdsl')
     DataMapper.repository(:default).adapter.resource_naming_convention = ResourceNamingConvention

@@ -8,6 +8,10 @@ end
  
 module FieldNamingConvention
   def self.call(property)
-    property.name.to_s.camelize :lower
+    if property.options[:index]
+      property.name
+    else
+      property.name.to_s.camelize :lower
+    end
   end
 end
