@@ -1,4 +1,4 @@
-require './loader.rb'
+require './app/loader.rb'
 
 describe Loader do
   it "should load all models" do

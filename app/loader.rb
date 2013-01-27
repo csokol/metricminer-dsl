@@ -3,10 +3,11 @@ require 'data_mapper'
 require 'active_support/all'
 
 class Loader
+  MODELS_DIR = 'app/model/'
 
   def load_classes
-    scripts = Dir.entries("model").select {|f| f.end_with? ".rb"} 
-    scripts = scripts.map {|s| "model/" + s}
+    scripts = Dir.entries(MODELS_DIR).select {|f| f.end_with? ".rb"} 
+    scripts = scripts.map {|s| MODELS_DIR + s}
 
     load "config/initialize.rb"
 
