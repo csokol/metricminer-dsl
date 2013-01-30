@@ -16,6 +16,16 @@ describe Loader do
   it "should load commits" do
     commits = Commit.all
     commits.size.should eq(58)
+    commit = commits[0]
+    commit.commit_message.class.should eq(CommitMessage)
+    commit.project.class.should eq(Project)
+  end
+
+  it "should load messages" do
+    messages = CommitMessage.all
+    message = messages[0]
+    messages.size.should eq(58)
+    message.message.class.should eq(String)
   end
 
 end

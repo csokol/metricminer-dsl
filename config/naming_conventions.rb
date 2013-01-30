@@ -2,7 +2,7 @@
 
 module ResourceNamingConvention
   def self.call(name)
-    name.downcase.singularize.titleize
+    name
   end
 end
  
