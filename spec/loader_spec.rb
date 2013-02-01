@@ -20,6 +20,7 @@ describe Loader do
     commit.commit_message.class.should eq(CommitMessage)
     commit.project.class.should eq(Project)
     commit.author.class.should eq(Author)
+    commit.commit_diff.class.should eq(CommitDiff)
   end
 
   it "should load messages" do
@@ -33,5 +34,11 @@ describe Loader do
     authors = Author.all
     author = authors[0]
     authors.size.should eq(1)
+  end
+
+  it "should load diffs" do
+    diffs = CommitDiff.all
+    diff = diffs[0]
+    diffs.size.should eq(58)
   end
 end
