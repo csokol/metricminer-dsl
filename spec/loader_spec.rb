@@ -19,6 +19,7 @@ describe Loader do
     commit = commits[0]
     commit.commit_message.class.should eq(CommitMessage)
     commit.project.class.should eq(Project)
+    commit.author.class.should eq(Author)
   end
 
   it "should load messages" do
@@ -28,4 +29,9 @@ describe Loader do
     message.message.class.should eq(String)
   end
 
+  it "should load authors" do
+    authors = Author.all
+    author = authors[0]
+    authors.size.should eq(1)
+  end
 end
