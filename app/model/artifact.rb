@@ -6,7 +6,6 @@ class Artifact
   property :kind, String
   property :name, String
 
-  #todo: map this
-  #property :project_id, Serial
+  belongs_to :project, :child_key => [:project_id]
 
 end

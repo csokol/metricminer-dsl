@@ -52,6 +52,8 @@ describe Loader do
   it "should load artifacts" do
     artifacts = Artifact.all
     artifacts.size.should eq(101)
+    a = artifacts[0]
+    a.project.class.should eq(Project)
   end
 
 end
