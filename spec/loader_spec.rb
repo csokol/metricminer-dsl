@@ -41,4 +41,10 @@ describe Loader do
     diff = diffs[0]
     diffs.size.should eq(58)
   end
+
+  it "should load modifications" do
+    modifications = Modification.all
+    modifications.size.should eq(311)
+  end
+
 end

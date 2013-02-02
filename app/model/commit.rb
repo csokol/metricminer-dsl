@@ -12,4 +12,6 @@ class Commit
   belongs_to :commit_message, :child_key => [:message_id]
   belongs_to :commit_diff, :child_key => [:diff_id]
 
+  has n, :modifications
+
 end
