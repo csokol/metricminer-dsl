@@ -7,8 +7,6 @@ class Modification
   property :kind, String
 
   belongs_to :commit, :child_key => [:commit_id]
-
-  #todo: map these relationships
-  #property :artifact_id, Integer
+  belongs_to :artifact, :child_key => [:artifact_id]
 
 end

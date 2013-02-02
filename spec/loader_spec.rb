@@ -45,6 +45,13 @@ describe Loader do
   it "should load modifications" do
     modifications = Modification.all
     modifications.size.should eq(311)
+    modification = modifications[0]
+    modification.artifact.class.should eq(Artifact)
+  end
+  
+  it "should load artifacts" do
+    artifacts = Artifact.all
+    artifacts.size.should eq(101)
   end
 
 end
