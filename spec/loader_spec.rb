@@ -58,4 +58,18 @@ describe Loader do
     a.project.class.should eq(Project)
   end
 
+  it "should load cc result" do
+    cc_results = CCResult.all
+    cc_results.size.should eq(230)
+    cc = cc_results[0]
+    cc.source_code.class.should eq(SourceCode)
+  end
+
+  it "should load source code" do
+    sources = SourceCode.all
+    sources.size.should eq(311)
+    s = sources[0]
+    s.modification.class.should eq(Modification)
+  end
+
 end
