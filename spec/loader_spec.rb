@@ -11,6 +11,8 @@ describe Loader do
   it "should load projects" do
     projects = Project.all
     projects.size.should eq(1)
+    p = projects[0]
+    p.commits.first.class.should eq(Commit)
   end
 
   it "should load commits" do

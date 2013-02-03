@@ -7,4 +7,6 @@ class Project
   property :name, String
   property :total_commits, String
 
+  has n, :commits
+
 end
